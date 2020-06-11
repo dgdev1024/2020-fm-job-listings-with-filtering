@@ -1,0 +1,36 @@
+{
+  "name": "2020-fm-job-listings-with-filtering",
+  "version": "1.0.0",
+  "description": "My implementation of Frontend Mentor's \"Job Listings with Filtering\" challenge.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgdev1024/2020-fm-job-listings-with-filtering.git"
+  },
+  "keywords": [
+    "frontend",
+    "mentor",
+    "job",
+    "listings",
+    "with",
+    "filtering"
+  ],
+  "author": "Dennis Griffin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dgdev1024/2020-fm-job-listings-with-filtering/issues"
+  },
+  "homepage": "https://github.com/dgdev1024/2020-fm-job-listings-with-filtering#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.8"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
