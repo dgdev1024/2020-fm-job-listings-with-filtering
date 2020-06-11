@@ -1,0 +1,60 @@
+@import "../../global.scss";
+
+.fm-filters {
+  padding: 8px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: auto 64px;
+  align-items: center;
+
+  &.fm-empty {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .fm-filter-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    .fm-filter-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 8px;
+      overflow: hidden;
+      background-color: $color-filter-tablets;
+      border-radius: 4px;
+
+      .fm-filter-card-name {
+        margin: 0px 8px;
+        font-size: 0.8em;
+        font-weight: $font-weight-bold;
+        color: $color-desaturated-dark-cyan;
+      }
+
+      .fm-filter-card-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background-color: $color-desaturated-dark-cyan;
+        border: none;
+      }
+    }
+  }
+
+  a {
+    justify-self: center;
+    color: $color-dark-grayish-cyan;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
