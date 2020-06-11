@@ -42,6 +42,12 @@
         height: 24px;
         background-color: $color-desaturated-dark-cyan;
         border: none;
+        transition: $time-transition-normal;
+
+        &:hover {
+          background-color: $color-very-dark-grayish-cyan;
+          cursor: pointer;
+        }
       }
     }
   }

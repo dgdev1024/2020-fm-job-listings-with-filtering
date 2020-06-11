@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import Filters from "../filters";
 import JobCard from "../job-card";
 import Jobs from "../../lib/data";
+import * as Logos from "../../img/*.svg";
 import "./index.scss";
 
 const App = () => {
@@ -50,7 +51,12 @@ const App = () => {
         />
         <div className="fm-job-cards">
           {filterJobs().map((job) => (
-            <JobCard key={job.id} job={job} onFilterClick={toggleFilter} />
+            <JobCard
+              key={job.id}
+              job={job}
+              logo={Logos[job.logo]}
+              onFilterClick={toggleFilter}
+            />
           ))}
         </div>
       </div>

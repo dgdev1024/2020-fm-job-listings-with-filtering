@@ -5,12 +5,12 @@
 import React from "react";
 import "./index.scss";
 
-const JobCard = ({ id, job, onFilterClick }) => {
+const JobCard = ({ job, logo, onFilterClick }) => {
   const filters = [job.role, job.level, ...job.languages, ...job.tools];
 
   return (
-    <div className="fm-job-card">
-      <div className="fm-job-logo"></div>
+    <div className={`fm-job-card ${job.featured === true ? "featured" : ""}`}>
+      <img src={logo} alt={job.company} className="fm-job-logo" />
       <div className="fm-job-body">
         <p className="fm-job-company">
           <span>{job.company}</span>

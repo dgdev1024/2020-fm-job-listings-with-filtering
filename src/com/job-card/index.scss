@@ -4,23 +4,43 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 24px 0px;
+  margin: 40px 0px;
   padding: 12px;
+  padding-left: 20px;
   background-color: white;
-  border-left: 8px solid $color-dark-grayish-cyan;
   border-radius: 8px;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
 
+  &.featured {
+    padding-left: 12px;
+    border-left: 8px solid $color-very-dark-grayish-cyan;
+  }
+
   @media #{$screen-medium} {
+    margin: 24px 0px;
     flex-direction: row;
     align-items: center;
   }
 
   .fm-job-logo {
+    width: 56px;
+    height: 56px;
+    margin-top: -40px;
+    margin-left: 12px;
+
+    @media #{$screen-medium} {
+      width: 64px;
+      height: 64px;
+      margin: 0px 20px;
+    }
   }
 
   .fm-job-body {
     padding: 12px;
+
+    @media #{$screen-medium} {
+      min-width: 320px;
+    }
 
     .fm-job-company {
       display: flex;
@@ -58,6 +78,12 @@
       padding: 12px 0px;
       font-weight: $font-weight-bold;
       color: $color-very-dark-grayish-cyan;
+      transition: $time-transition-normal;
+
+      &:hover {
+        color: $color-desaturated-dark-cyan;
+        cursor: pointer;
+      }
     }
 
     .fm-job-details {
@@ -85,7 +111,8 @@
     border-top: 1px solid $color-dark-grayish-cyan;
 
     @media #{$screen-medium} {
-      flex-wrap: wrap-reverse;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
       margin-left: auto;
       border-top: none;
       padding: 0px;
@@ -100,9 +127,21 @@
       color: $color-desaturated-dark-cyan;
       background-color: $color-filter-tablets;
       border: none;
+      border-radius: 4px;
+      transition: $time-transition-normal;
+
+      &:hover {
+        background-color: $color-desaturated-dark-cyan;
+        color: $color-filter-tablets;
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+      }
 
       @media #{$screen-medium} {
-        margin: 0px 2px;
+        margin: 0px 2px 2px;
       }
 
       &:hover {
